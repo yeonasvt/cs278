@@ -1,0 +1,12 @@
+version '2'
+services:
+  jhipster:
+    image: jhipster-project:latest
+    ports:
+     - "8080:8080"
+  grading:
+    image: grading_helper:latest
+    stdin_open: true
+    tty: true
+    depends_on:
+     - jhipster
